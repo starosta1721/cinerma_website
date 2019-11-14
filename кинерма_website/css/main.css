@@ -1,0 +1,567 @@
+body {
+	margin: 0; 
+	padding: 0; 
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
+	width: 100%;
+}
+* {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: normal;
+	font-family: 'Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+/* 1й блок. Содержит меню, названия сайта, ссылки соц.сети */
+.container_top {
+	width: 100vw;
+	height: 900px;
+	background-image: url('../images/top_background.jpg');
+	background-size: cover;
+	-webkit-background-size: 100%;
+}
+.introduction {
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	width: 75%;
+
+}
+
+.header {
+	width: 100%;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-around;
+	font-size: 24px;
+	font-weight: 200;
+	font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+}
+
+.nav_link {
+	margin: 0 10px;
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.1s linear;
+	position: relative;
+	
+}
+.nav_link:hover {
+	color:#bababa; 
+} 
+.nav_link:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	display: none;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+} 
+.nav_link:hover:after {
+	display: block;
+	position: absolute;
+} 
+.site_name {
+	margin: 250px auto 0 auto;
+	height: 400px;
+	width: 75%;
+}
+.name {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 190.97px;
+	text-transform: uppercase;
+	color: #fff;
+	opacity: .61;
+	text-align: center;
+}
+.descr {
+	font-size: 36px;
+	font-family: "Open Sans Light";
+	color: #fff;
+	text-align: right;
+	margin-top: -25px;
+}
+.social {
+	display: inline-block;
+	margin: 0;
+	color: #fff;
+	height: 570px;
+	width: 50px;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+}
+.inner_social {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+}
+.fab {
+	font-size: 40px;
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #fff;
+}
+.choose_tour {
+	width: 300px;
+	height: 93px;
+	display: block;
+	margin: 0 auto;
+
+	
+}
+.choose_tour_link {
+	text-decoration: none;
+}
+.choose_tour_text {
+
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	text-transform: uppercase;  
+	font-family: "Open Sans Regular";
+	background-color: #402ded;
+	border-radius: 5%;
+	display: inline;	
+	padding: 35px;
+}
+.container_1 {
+	margin-top: 20px;
+	display: block;
+	height: 500px;
+}
+.container_1_text_top {
+	display: block;
+	width: 1366px;
+	float: right;
+	margin-top: 32px;
+
+}
+.container_1_text1 {
+	font-size: 60px;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: #9f97f0;
+	border-radius: 3%; 
+	padding: 45px 0;
+	opacity: .95;
+}
+.container_1_picture {
+	position: relative;
+	top: -60px;
+	z-index: -1;
+	width: 60%;
+	float: left;
+	height: 642px;
+}
+.container_1_text_2 {
+	float: right;
+	width: 40%;
+	font-size: 36px;
+	font-family: "Open Sans Regular";
+	color: #000;
+	padding: 50px 150px 10px 10px;
+	text-transform: uppercase;
+	height: 642px;
+}
+.detailed_text {
+	color: #402ded;
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;  
+	font-family: "Open Sans Regular";
+	border: 1px solid #402ded;
+	border-radius: 5%;
+	display: inline;	
+	padding: 35px;
+
+}
+.detailed {
+	text-decoration: none;
+	text-align: center;
+	position: relative;
+	left: 150px;
+	top: 55px;
+}
+.container_1_arrows {
+	width: 100%;
+	height: 136px;
+	display: flex;
+	justify-content: center;
+	font-size: 65px;
+	font-weight: 200;
+	font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+
+}
+.fas {
+	color: #868686;
+}
+.fa-arrow-left {
+	padding-right: 250px;
+}
+.fa-arrow-right {
+	padding-left: 250px;
+}
+.container_2 {
+	width: 100%;
+	height: 900px;
+}
+
+.form {
+	/* The image used */
+	background-image: url("../images/фон2.jpg");
+	  height: 893px;
+	  width: 100%;
+	/* Control the height of the image */
+	min-height: 380px;
+  
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+  }
+  
+  /* Add styles to the form container */
+  .container_form {
+	position: relative;
+	max-width: 600px;
+	padding: 16px;
+	z-index: 1000;
+	margin: auto;
+ }
+  .form_title {
+	font-family: 'Open Sans';
+	font-weight: bold;
+	text-align: center;
+	font-size: 42px;
+	text-transform: uppercase;  
+	color: #fff;
+	width: 1115px;
+	margin: 0 auto;
+	display: relative;
+	padding-top: 113px;
+  }
+  /* Full-width input fields */
+	input[type=text], select {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+	border-radius: 7px;
+  }
+  
+  input[type=text]:focus, select:focus {
+	background-color: #ddd;
+	outline: none;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+	background-color: #402ded;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 370px;
+	opacity: 0.9;
+	justify-content: center;
+	font-family: 'Open Sans Regular';
+	font-weight: bold;
+	text-align: center;
+	font-size: 35.43px;
+	text-transform: uppercase;  
+	border-radius: 5px;
+  }
+  
+  .btn:hover {
+	opacity: 1;
+  }
+  .button {
+	text-align: center; 
+  }
+  .container_2 {
+	  height: 900px;
+	  width: 100%;
+	  background-image: url("../images/img_bottom.jpg");
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: relative;
+  }
+  .container_2_text {
+	position: relative;
+	z-index: 1000;
+	background-color: #9890e9;
+	color: white;
+	border: none;
+	cursor: pointer;
+	width: 70%;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	text-align: left;
+	font-size: 48px;
+	text-transform: uppercase;  
+	border-radius: 5px;
+	display: inline-block;
+	margin: 150px 0;
+	padding-left: 400px;
+  }
+  .navigation_footer {
+	display: flex;
+	justify-content: space-around;
+	font-size: 24px;
+	font-weight: 200;
+	font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+	background-color: #404042;
+	width: 100%;
+	height: 100px;
+	align-items: center;
+	}
+  .nav_link {
+	margin: 0 10px;
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.1s linear;
+	position: relative;
+	}
+	.all_right_reserved {
+		width: 100vw;
+		height: 53px;
+		background-color: #000000;
+		position: relative;
+	}
+	.logo_c, .right_res {
+		display: inline-block;
+		width: 50%;
+		color: #fff;
+		font-weight: 18px;
+		font-family: "Open Sans Light";
+		text-align: center;
+		padding-top: 15px;
+	}
+	.logo_c {
+		float: left;
+	}
+
+/* стили для страницы с турами */
+	.tours_container_top {
+		height: 900px;
+		width: 100%;
+		background-image: url("../images/tourheader.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+	.tours_header {
+		height: 100px;
+		width: 100%;
+		position: relative;
+		z-index: 1000;
+		background-color: #2f3045;
+		opacity: .7;
+	}
+	.tours_navigation {
+		display: flex;
+		justify-content: space-around;
+		font-size: 24px;
+		font-weight: 200;
+		font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+		padding: 40px 240px;
+	}
+	.tours_title {
+		margin: 150px auto 0 auto;
+		width: 75%;
+		height: 300px;
+	}
+	.tours_title_text {
+		font-family: 'Open Sans';
+		font-weight: bold;
+		font-size: 119px;
+		text-transform: uppercase;
+		color: #fff;
+		opacity: .61;
+		text-align: center;
+	}
+	.tours_info{
+		width: 600px;
+		height: 93px;
+		margin: 110px auto;	
+		display: block;	
+	}
+	.tours_info_link {
+		text-decoration: none;
+		
+	}
+	.tours_info_text {
+		color: #fff;
+		text-align: center;
+		font-size: 36px;
+		text-transform: uppercase;  
+		font-family: "Open Sans Regular";
+		background-color: #402ded;
+		border-radius: 5%;
+		display: inline;	
+		padding: 35px 90px;
+	}
+	.container_tours_2 {
+		margin-top: 72px;
+		height: 828px;
+		box-sizing: border-box;
+	}
+	.container_tours_2_text {
+		color: #8f8be3;
+		text-align: center;
+		font-family: 'Open Sans';
+		font-weight: bold;
+		font-size: 86.54px;
+		text-transform: uppercase;  
+	}
+	.container_tours_block2 {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 50px;
+	}
+	.container_tours_2_div {
+		margin-right: 240px;
+	}
+	.container_tours_2_text2 {
+		font-family: "Open Sans Regular";
+		font-size: 36px;
+		text-align: right;
+		padding: 75px 38px 60px 145px;
+		overflow: hidden;
+		height: 673px;
+	}
+	.container_tours_block3 {
+		display: flex;
+		justify-content: flex-start;
+		height: 700px;
+	}
+	.container_tours_3_div {
+		margin-left: 240px;
+		overflow-y: hidden;
+	}
+	.container_tours_3_text2 {
+		font-family: "Open Sans Regular";
+		font-size: 42px;
+		text-align: left;
+		padding: 57px 50px 60px 40px;
+		overflow: hidden;
+		height: 620px;
+	}
+	.tours_register {
+		color: #fff;
+		display: block;
+		align-items: center;
+		width: 600px;
+		height: 93px;
+		margin: 0 auto 73px auto;
+	}
+	.tours_register_text {
+		color: #fff;
+		text-align: center;
+		font-size: 36px;
+		text-transform: uppercase;  
+		font-family: "Open Sans Regular";
+		background-color: #402ded;
+		border-radius: 5%;
+		display: inline;	
+		padding: 35px 78px;
+	}
+	.tours_register_link {
+		text-decoration: none;
+	}
+	.tour_footer {
+		width: auto;
+	}
+	.footer_tour {
+		padding: 0 240px;
+	}
+	
+
+/* .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .5);
+	display: none;
+}
+
+.popup {
+	position: absolute;
+	width: 300px;
+	height: 180px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	background-color: #FFF;
+}
+
+.close-popup {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.close-popup:before {
+	content: '';
+	background-color: #000;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+	transform: rotate(-45deg);
+}
+
+.close-popup:after {
+	content: '';
+	background-color: #000;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}
+
+.scroll-up {
+    width: 130px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fcfcfc;
+    color: #aaa;
+    font-size: 13px;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background .2s ease;
+    display: none;
+}
+
+.scroll-up:hover {
+    background-color: #eeeeee;
+    color: #777777;
+} */
