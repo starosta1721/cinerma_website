@@ -1,21 +1,23 @@
+
 body {
 	margin: 0; 
 	padding: 0; 
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
 	width: 100%;
+	/* min-width: 1440px;  */
 }
 * {
 	box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h2, p {
 	font-weight: normal;
 	font-family: 'Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
 	margin: 0;
 }
 /* 1й блок. Содержит меню, названия сайта, ссылки соц.сети */
 .container_top {
-	width: 100vw;
+	width: 100%;
 	height: 900px;
 	background-image: url('../images/top_background.jpg');
 	background-size: cover;
@@ -47,7 +49,9 @@ h1, h2, h3, h4, h5, h6, p {
 	text-decoration: none;
 	transition: color 0.1s linear;
 	position: relative;
-	
+}
+.menu2 {
+	white-space: nowrap;
 }
 .nav_link:hover {
 	color:#bababa; 
@@ -74,18 +78,19 @@ h1, h2, h3, h4, h5, h6, p {
 .name {
 	font-family: 'Open Sans';
 	font-weight: bold;
-	font-size: 190.97px;
+	font-size: calc(8.5rem + 6 * (100vw - 320px) / 880);
 	text-transform: uppercase;
 	color: #fff;
 	opacity: .61;
 	text-align: center;
 }
 .descr {
-	font-size: 36px;
+	font-size: calc(1.5rem + 6 * (100vw - 320px) / 880);;
 	font-family: "Open Sans Light";
 	color: #fff;
 	text-align: right;
 	margin-top: -25px;
+	white-space: nowrap;
 }
 .social {
 	display: inline-block;
@@ -105,85 +110,71 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .fab {
 	font-size: 40px;
-	color: transparent;
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: #fff;
+	color: #fff;
+	opacity: 0.8;
+}
+.fa-twitter:hover {
+	color: #38A1F3;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.7);
+	transform: scale(2);
+}
+.fa-facebook-f:hover{
+	color: #4267b2;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.7);
+	transform: scale(2);
+}
+.fa-instagram:hover {
+color: #bc2a8d; 
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.7);
+	transform: scale(2);
+}
+.fa-youtube:hover {
+	color: #ED3833;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.7);
+	transform: scale(2);
 }
 .choose_tour {
 	width: 300px;
 	height: 93px;
 	display: block;
 	margin: 0 auto;
-
-	
 }
 .choose_tour_link {
 	text-decoration: none;
 }
 .choose_tour_text {
-
 	color: #fff;
 	text-align: center;
 	font-size: 24px;
 	text-transform: uppercase;  
-	font-family: "Open Sans Regular";
+	font-family: "Open Sans Regular", "Open Sans";
 	background-color: #402ded;
 	border-radius: 5%;
 	display: inline;	
 	padding: 35px;
 }
-.container_1 {
-	margin-top: 20px;
-	display: block;
-	height: 500px;
-}
-.container_1_text_top {
-	display: block;
-	width: 1366px;
-	float: right;
-	margin-top: 32px;
+.detailed_text_link {
+    display: inline-block;
+    height: 40px;
+    position: absolute;
+    right: 186px;
+    bottom: 157px;
 
 }
-.container_1_text1 {
-	font-size: 60px;
-	font-family: 'Open Sans';
-	font-weight: bold;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	background-color: #9f97f0;
-	border-radius: 3%; 
-	padding: 45px 0;
-	opacity: .95;
-}
-.container_1_picture {
-	position: relative;
-	top: -60px;
-	z-index: -1;
-	width: 60%;
-	float: left;
-	height: 642px;
-}
-.container_1_text_2 {
-	float: right;
-	width: 40%;
-	font-size: 36px;
-	font-family: "Open Sans Regular";
-	color: #000;
-	padding: 50px 150px 10px 10px;
-	text-transform: uppercase;
-	height: 642px;
-}
 .detailed_text {
-	color: #402ded;
+	color: #fbfbfb;
 	text-align: center;
 	font-size: 30px;
 	text-transform: uppercase;  
 	font-family: "Open Sans Regular";
-	border: 1px solid #402ded;
 	border-radius: 5%;
 	display: inline;	
 	padding: 35px;
+	background-color: rgba(0,0,0,0.6);
 
 }
 .detailed {
@@ -193,35 +184,12 @@ h1, h2, h3, h4, h5, h6, p {
 	left: 150px;
 	top: 55px;
 }
-.container_1_arrows {
-	width: 100%;
-	height: 136px;
-	display: flex;
-	justify-content: center;
-	font-size: 65px;
-	font-weight: 200;
-	font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
-
-}
-.fas {
-	color: #868686;
-}
-.fa-arrow-left {
-	padding-right: 250px;
-}
-.fa-arrow-right {
-	padding-left: 250px;
-}
-.container_2 {
-	width: 100%;
-	height: 900px;
-}
 
 .form {
 	/* The image used */
 	background-image: url("../images/фон2.jpg");
-	  height: 893px;
-	  width: 100%;
+	height: 893px;
+	width: 100%;
 	/* Control the height of the image */
 	min-height: 380px;
   
@@ -230,6 +198,7 @@ h1, h2, h3, h4, h5, h6, p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	margin-top: 10px;
   }
   
   /* Add styles to the form container */
@@ -247,11 +216,49 @@ h1, h2, h3, h4, h5, h6, p {
 	font-size: 42px;
 	text-transform: uppercase;  
 	color: #fff;
-	width: 1115px;
 	margin: 0 auto;
 	display: relative;
 	padding-top: 113px;
   }
+
+  /* поп ап окно стиль */
+  .button a {
+	  text-decoration: none;
+	  color: #fff;
+  }
+  .b-popup{
+    width: 100%;
+    height: auto;
+    /* background-color: rgba(0,0,0,0.5); */
+    overflow:hidden;
+    position: absolute;
+	border-radius: 7px;
+	top: 25%;
+}
+
+.b-popup .b-popup-content{
+    margin: 0 auto;
+    width:300px;
+    height: 80px;
+    padding:10px;
+    background-color: #c5c5c5;
+    border-radius:5px;
+	box-shadow: 0px 0px 10px #000;
+	white-space: nowrap;
+	text-align: center;
+}
+.b-popup-content p {
+	margin-bottom: 10px;
+}
+.b-popup-content a {
+  text-decoration: none;
+  color: white;
+  border-radius: 2px;
+  padding: 2px;
+  background: #92c595;
+  position: relative;
+ 
+}
   /* Full-width input fields */
 	input[type=text], select {
 	width: 100%;
@@ -260,6 +267,7 @@ h1, h2, h3, h4, h5, h6, p {
 	border: none;
 	background: #f1f1f1;
 	border-radius: 7px;
+	font-size: 22px;
   }
   
   input[type=text]:focus, select:focus {
@@ -289,34 +297,8 @@ h1, h2, h3, h4, h5, h6, p {
 	opacity: 1;
   }
   .button {
-	text-align: center; 
-  }
-  .container_2 {
-	  height: 900px;
-	  width: 100%;
-	  background-image: url("../images/img_bottom.jpg");
-	  background-position: center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  position: relative;
-  }
-  .container_2_text {
-	position: relative;
-	z-index: 1000;
-	background-color: #9890e9;
-	color: white;
-	border: none;
-	cursor: pointer;
-	width: 70%;
-	font-family: 'Open Sans';
-	font-weight: bold;
-	text-align: left;
-	font-size: 48px;
-	text-transform: uppercase;  
-	border-radius: 5px;
-	display: inline-block;
-	margin: 150px 0;
-	padding-left: 400px;
+	text-align: center;
+	margin-top: 100px; 
   }
   .navigation_footer {
 	display: flex;
@@ -328,6 +310,8 @@ h1, h2, h3, h4, h5, h6, p {
 	width: 100%;
 	height: 100px;
 	align-items: center;
+	margin-top: 60px;
+	padding: 50px 240px;
 	}
   .nav_link {
 	margin: 0 10px;
@@ -337,7 +321,7 @@ h1, h2, h3, h4, h5, h6, p {
 	position: relative;
 	}
 	.all_right_reserved {
-		width: 100vw;
+		width: 100%;
 		height: 53px;
 		background-color: #000000;
 		position: relative;
@@ -356,111 +340,70 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 
 /* стили для страницы с турами */
-	.tours_container_top {
-		height: 900px;
-		width: 100%;
-		background-image: url("../images/tourheader.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-	}
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  .tour {
+
+	  margin: 45px;
+  }
+  .tour_title {
+	color: #8f8be3;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-weight: bold;
+	font-size: 86.54px;
+	text-transform: uppercase;  
+  }
+.tour .tourPage {
+	color: #fff;
+    width: auto;
+    height: 93px;
+	margin: 50px;
+	display: block;
+}
+.tour .tourPageText {
+	background-color: #9a90f7;	
+	text-align: center;
+	margin: 0 auto;
+	width: 500px;
+	padding: 25px;
+	border-radius: 7px;
+}
+.tourPageLink {
+ text-decoration: none;
+ font-family: 'Open Sans';
+ font-size: 36px;
+ white-space: nowrap;
+ text-transform: uppercase;
+ color: #fff;
+
+}
+
 	.tours_header {
-		height: 100px;
+		height: 120px;
 		width: 100%;
 		position: relative;
-		z-index: 1000;
-		background-color: #2f3045;
-		opacity: .7;
+		opacity: 1;
+		background: url("../images/о_деревне_heder.jpg") repeat-x bottom;
 	}
+	.tours_header:before {content: "";position:absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.5);}
 	.tours_navigation {
 		display: flex;
 		justify-content: space-around;
 		font-size: 24px;
 		font-weight: 200;
 		font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
-		padding: 40px 240px;
-	}
-	.tours_title {
-		margin: 150px auto 0 auto;
-		width: 75%;
-		height: 300px;
-	}
-	.tours_title_text {
-		font-family: 'Open Sans';
-		font-weight: bold;
-		font-size: 119px;
-		text-transform: uppercase;
-		color: #fff;
-		opacity: .61;
-		text-align: center;
-	}
-	.tours_info{
-		width: 600px;
-		height: 93px;
-		margin: 110px auto;	
-		display: block;	
-	}
-	.tours_info_link {
-		text-decoration: none;
-		
-	}
-	.tours_info_text {
-		color: #fff;
-		text-align: center;
-		font-size: 36px;
-		text-transform: uppercase;  
-		font-family: "Open Sans Regular";
-		background-color: #402ded;
-		border-radius: 5%;
-		display: inline;	
-		padding: 35px 90px;
-	}
-	.container_tours_2 {
-		margin-top: 72px;
-		height: 828px;
-		box-sizing: border-box;
-	}
-	.container_tours_2_text {
-		color: #8f8be3;
-		text-align: center;
-		font-family: 'Open Sans';
-		font-weight: bold;
-		font-size: 86.54px;
-		text-transform: uppercase;  
-	}
-	.container_tours_block2 {
-		display: flex;
-		justify-content: flex-start;
-		margin-top: 50px;
-	}
-	.container_tours_2_div {
-		margin-right: 240px;
-	}
-	.container_tours_2_text2 {
-		font-family: "Open Sans Regular";
-		font-size: 36px;
-		text-align: right;
-		padding: 75px 38px 60px 145px;
-		overflow: hidden;
-		height: 673px;
-	}
-	.container_tours_block3 {
-		display: flex;
-		justify-content: flex-start;
-		height: 700px;
-	}
-	.container_tours_3_div {
-		margin-left: 240px;
-		overflow-y: hidden;
-	}
-	.container_tours_3_text2 {
-		font-family: "Open Sans Regular";
-		font-size: 42px;
-		text-align: left;
-		padding: 57px 50px 60px 40px;
-		overflow: hidden;
-		height: 620px;
+		padding: 50px 240px;
 	}
 	.tours_register {
 		color: #fff;
@@ -470,98 +413,542 @@ h1, h2, h3, h4, h5, h6, p {
 		height: 93px;
 		margin: 0 auto 73px auto;
 	}
-	.tours_register_text {
-		color: #fff;
-		text-align: center;
-		font-size: 36px;
-		text-transform: uppercase;  
-		font-family: "Open Sans Regular";
-		background-color: #402ded;
-		border-radius: 5%;
-		display: inline;	
-		padding: 35px 78px;
-	}
-	.tours_register_link {
-		text-decoration: none;
-	}
 	.tour_footer {
 		width: auto;
 	}
 	.footer_tour {
 		padding: 0 240px;
 	}
+
+/* стили слайдер */
+/* Собственно сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 750px;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 750px;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+/* .slider .prev:before,
+.slider .next:before {
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+/* Заголовок слайда */
+.slideText {
+	background: #000;
+	opacity: 0.5;
+	padding: 15px;
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%);
+	height: 650px;
+	overflow-y: hidden;
+}
+.slideText_tour {
+	position: absolute;
+	left: 40%;
+    top: 50%;
+}
+.slideNews {
+	background: #000;
+	opacity: 0.5;
+	padding: 15px;
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 87px;
+    top: 40px;
+    transform: translate(-50%, -50%);
+}
+
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+	/* стили страницы контакты */
+	.contacts {
+		margin-top: 60px;
+		/* background-color: #c0ecad;
+		opacity: 0.5; */
+		background-image: url("../images/forest.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.contacts_title {
+		font-size: 62px;
+		font-weight: 600;
+		font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+		text-align: center;
+		color: #fff;
+	}
+	.contacts_map_info {
+		padding-top: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+		display: flex;
+		justify-content: center;
+
+	}
+	.contacts_map {
+		padding-right: 10px;
+	}
+	.iframe_map {
+		height: 462px;
+		width: 496px;
+	}
+	.contacts_info {
+		padding-left: 10px;
+	}
+
+	.table-fill {
+	background: white;
+	border-radius:3px;
+	/* border-collapse: collapse; */
+	height: 320px;
+	margin: 0;
+	max-width: 600px;
+	padding:5px;
+	width: 100%;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  .title_cont {
+	font-size: 16px;
+	font-weight: 200;
+	font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+  }
+  .main_cont {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Open Sans','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+  }
+	 
+  tr {
+	border-top: 1px solid #C1C3D1;
+	border-bottom: 1px solid #C1C3D1;
+	color:#666B85;
+	font-size:16px;
+	font-weight:normal;
+	text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+  }
+  
+  td {
+	background:#FFFFFF;
+	padding:20px;
+	text-align:left;
+	vertical-align:middle;
+	font-weight:300;
+	font-size:18px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+	/* border-right: 1px solid #C1C3D1; */
+  }
+  
+  td:last-child {
+	border-right: 0px;
+  }
+  
+  td.text-left {
+	text-align: left;
+	width: 5px;
+	color: #aebe37;
+  }
+  
+  td.text-right {
+	text-align: left;
+  }
+.last_cell {
+	white-space: nowrap;
+	
+}
+.lnr-map, .shema, .lnr-location {
+	color: #000;
+	background-color: #d2e438;
+	padding: 11px 12px 14px 12px;
+	border-radius: 7% 0% 0% 7%;
+}
+.shema {
+	padding: 9.5px;
+	border-radius: 0% 7% 7% 0%;
+}
+
+
+	/* слайдер */
+	
+.slider {
+	/* устанавливаем относительное позиционирование элементу */
+	position: relative;
+	height: 780px;
+	margin-top: 120px;
+}
+
+	/* элементы управления (назад и вперёд) слайдером */
+.lnr {
+	color: black;
+	font-weight: 48px;
+	font-weight: 800;
+}
+	
 	
 
-/* .overlay {
-	position: absolute;
+/* о деревне */
+.about_kinerma {
+	margin: 0;
+	background-image: none;
+}
+.about_kinerma_container1 {
+	margin: 60px 0 0 0;
+	height: auto;
+	width: 100%;	
+	height: auto;
 	width: 100%;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, .5);
-	display: none;
+	padding: 0 50px;
 }
 
-.popup {
-	position: absolute;
-	width: 300px;
-	height: 180px;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	padding: 40px;
-	background-color: #FFF;
+ /* Разделительная полоса */
+ .divider {								/* minor cosmetics */
+	display: table; 
+	font-size: 24px; 
+	font-weight: bold;
+	text-align: center; 
+	width: 75%; 						/* divider width */
+	margin: 40px auto;					/* spacing above/below */
+}
+.divider span { display: table-cell; position: relative; }
+.divider span:first-child, .divider span:last-child {
+	width: 50%;
+	top: 13px;							/* adjust vertical align */
+	-moz-background-size: 100% 2px; 	/* line width */
+	background-size: 100% 2px; 			/* line width */
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+}
+.divider span:first-child {				/* color changes in here */
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
+	background-image: -webkit-linear-gradient(180deg, transparent, #000);
+	background-image: -moz-linear-gradient(180deg, transparent, #000);
+	background-image: -o-linear-gradient(180deg, transparent, #000);
+	background-image: linear-gradient(90deg, transparent, #000);
+}
+.divider span:nth-child(2) {
+	color: #000; padding: 0px 5px; width: auto; white-space: nowrap;
+}
+.divider span:last-child {				/* color changes in here */
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+	background-image: -webkit-linear-gradient(180deg, #000, transparent);
+	background-image: -moz-linear-gradient(180deg, #000, transparent);
+	background-image: -o-linear-gradient(180deg, #000, transparent);
+	background-image: linear-gradient(90deg, #000, transparent);
 }
 
-.close-popup {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	width: 23px;
-	height: 23px;
-	cursor: pointer;
+
+.about_kinerma_container1 img {
+	  display: inline-block;
+	  max-width: 100%;
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 8px;
+}
+.wrapper {
+	position: relative;
+	margin: 0 auto;
 }
 
-.close-popup:before {
-	content: '';
-	background-color: #000;
-	position: absolute;
-	height: 1px;
-	width: 31px;
-	top: 11px;
-	left: -4px;
-	transform: rotate(-45deg);
+/* Применение стилей при ширине экрана до 1024px */
+@media (max-width: 1024px) {
+	body {
+		width: 100%;
+		min-width: 864px;
+	}
+	.container_top {
+		height: 837px;
+	}
+	.navigation {
+		display: flex;
+		justify-content: space-around;
+		font-size: 25px;
+		font-weight: 200;
+		font-family: 'Open Sans Light','Open Sans','RobotoLight', Helvetica, Arial, sans-serif;
+	}
+	.site_name {
+		margin: 200px auto 0 auto;
+		height: 372px;
+	}
+	.name {
+		font-family: 'Open Sans';
+		font-weight: bold;
+		font-size: calc(7.5rem + 6 * (100vw - 320px) / 880);
+		text-transform: uppercase;
+		color: #fff;
+		opacity: .61;
+		text-align: center;
+	}
+	.descr {
+		font-size: calc(1.5rem + 6 * (100vw - 320px) / 880);;
+		font-family: "Open Sans Light";
+		color: #fff;
+		text-align: right;
+		margin-top: -25px;
+		white-space: nowrap;
+	}
+	.social {
+		display: inline-block;
+		margin: 0;
+		color: #fff;
+		height: 540px;
+		width: 50px;
+		position: absolute;
+		top: 67px;
+		left: 0px;
+	}
+	.fab {
+		font-size: 43px;
+	}
+	.choose_tour_text {
+		padding: 28px;
+		font-size: 28px;
+	}
+	.slider {
+		position: relative;
+		height: 747px;
+		margin-top: 100px;
+	}
+	.slideText {
+		font-size: 30px;
+		height: 650px;
+	}
+	.detailed_text {
+		font-size: 30px;
+		padding: 30px;
+	}
+	.detailed_text_link {
+		bottom: 128px;
+	}
+	.slider-dots_item {
+		height: 8px;
+		width: 8px;
+		margin: 0 2px;
+	}
+	input[type=text], select {
+		font-size: 20px;
+	}
+	.form {	
+		height: 864px;
+	}
+	.iframe_map {
+		height: 462px;
+		width: 450px;
+	}
+	.navigation_footer {
+		font-size: 20px;
+		width: 100%;
+		height: 75px;
+		margin-top: 55px;
+		padding: 45px 170px;
+	}
+	.tours_header {
+		height: 110px;
+	}
+	.tours_navigation {
+		font-size: 25px;
+		padding: 45px 240px;
+	}
+	.title_cont {
+		font-size: 32px;
+	}
+	.main_cont {
+		font-size: 25px;
+	}
+	td {
+		font-size: 30px;
+	}
+	.iframe_map {
+		height: 722px;
+	}
 }
-
-.close-popup:after {
-	content: '';
-	background-color: #000;
-	position: absolute;
-	height: 1px;
-	width: 31px;
-	top: 11px;
-	transform: rotate(45deg);
-	left: -4px;
+/* Применение стилей при ширине экрана до 768px */
+@media (max-width: 768px) {
+	.slider {
+		position: relative;
+		height: 747px;
+		margin-top: 75px;
+	}
+	.contacts {
+		margin-top: 45px;
+	}
+	.navigation_footer {
+		font-size: 25px;
+		width: 100%;
+		height: 75px;
+		margin-top: 55px;
+		padding: 45px 170px;
+	}
+	h2 {
+		font-size: 1.9em;
+	}
+	.logo_c, .right_res {
+		font-size: 21px;
+	}
+	td {
+		font-weight: 600;
+		font-size: 18px;
+	}
+	.lnr {
+		font-weight: 600;
+	}
+	.iframe_map {
+		display: none;
+	}
+	.title_cont {
+		font-size: 42px;
+	}
+	.main_cont {
+		font-size: 35px;
+	}
+	td {
+		font-size: 40px;
+	}
 }
+/* Применение стилей при ширине экрана до 575px */
 
-.scroll-up {
-    width: 130px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-color: #fcfcfc;
-    color: #aaa;
-    font-size: 13px;
-    text-align: center;
-    padding: 15px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: background .2s ease;
-    display: none;
+@media (max-width: 575px) {
+	.name {
+		font-size: calc(6.9rem + 6 * (100vw - 320px) / 880);
+	}
+	
+	.navigation {
+		font-size: 33px;
+	}
+	.social {
+		left: -42px;
+	}
+	.descr {
+		font-size: calc(1.9rem + 6 * (100vw - 320px) / 880);
+		margin-top: 10px;
+		white-space: normal	;
+	}
+	.fab {
+		font-size: 50px;
+	}
+	.choose_tour_text {
+		padding: 28px;
+		font-size: 37px;
+	}
+	.slider {
+		height: 731px;
+		margin-top: 50px;
+	}
+	.slideText {
+		font-size: 45px;
+	}
+	input[type=text], select {
+		font-size: 28px;
+	}
+	.form_title {
+		font-size: 59px;
+	}
+	.button {
+		margin-top: 50px;
+	}
+	.btn {
+		padding: 16px 20px;
+	    width: 428px;
+		font-size: 50.43px;
+	}
+	.navigation_footer {
+		font-size: 32px;
+	}
+	.logo_c, .right_res {
+		font-size: 24px;
+	}
+	.choose_tour_text {
+		padding: 28px;
+		font-size: 32px;
+	}
+	
+	.table-fill {
+		max-width: 786px;
+	}
+	.contacts_info {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.title_cont {
+		font-size: 42px;
+	}
+	.main_cont {
+		font-size: 35px;
+	}
+	td {
+		font-size: 40px;
+	}
 }
-
-.scroll-up:hover {
-    background-color: #eeeeee;
-    color: #777777;
-} */

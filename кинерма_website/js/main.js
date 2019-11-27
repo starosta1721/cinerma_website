@@ -1,59 +1,90 @@
-// Отправка заявки 
-$(document).ready(function() {
-	$('#form').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
-		if (document.form.name.value == '' || document.form.phone.value == '' ) {
-			valid = false;
-			return valid;
-		}
-		$.ajax({
-			type: "POST",
-			url: "mail/mail.php",
-			data: $(this).serialize()
-		}).done(function() {
-			$('.js-overlay-thank-you').fadeIn();
-			$(this).find('input').val('');
-			$('#form').trigger('reset');
-		});
-		return false;
+
+
+// пролистивыние страницы
+$(document).ready(function(){
+	// плавное перемещение страницы к нужному блоку
+	$("nav a").click(function () {
+		elementClick = $(this).attr("href");
+    destination = $(elementClick).offset().top;
+		$("body,html").animate({scrollTop: destination }, 1800);
 	});
 });
 
-// Закрыть попап «спасибо»
-$('.js-close-thank-you').click(function() { // по клику на крестик
-	$('.js-overlay-thank-you').fadeOut();
+// слайдер
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Основная функция слайдера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("item");
+    var dots = document.getElementsByClassName("slider-dots_item");
+    var slides_tours = [], slides_news = [];
+
+    for (var j = 0; j < slides.length; j++) {
+      if (slides[j].parentElement.id === 'tours') {
+        slides_tours.push(slides[j]);
+      } else {
+        slides_news.push(slides[j]);
+      }
+    };
+    
+    if (n > slides_tours.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides_tours.length
+    }
+    for (i = 0; i < slides_tours.length; i++) {
+      slides_tours[i].style.display = "none";
+    }
+    
+    if (n > slides_news.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides_news.length
+    }
+    for (i = 0; i < slides_news.length; i++) {
+      slides_news[i].style.display = "none";
+    }
+    
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides_tours[slideIndex - 1].style.display = "block";
+    slides_news[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+
+// сообщение при заполнении формы
+
+$(document).ready(function(){
+  //Скрыть PopUp при загрузке страницы    
+  PopUpHide();
 });
-
-$(document).mouseup(function (e) { // по клику вне попапа
-	var popup = $('.popup');
-	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
-		$('.js-overlay-thank-you').fadeOut();
-	}
-});
-
-// Маска ввода номера телефона (плагин maskedinput)
-$(function($){
-	$('[name="phone"]').mask("+7(999) 999-9999");
-});
-
-
-
-// Кнопка «Наверх/Вниз»
-var lastScrollPosition = 0; 
-
-$('#scroll-up').click( function(){
-	if ( $(document).scrollTop() > 0 ) {
-		$('body').animate({scrollTop:0},1000);
-		lastScrollPosition = $(document).scrollTop();
-	} else {
-		$('body').animate({scrollTop:lastScrollPosition},1000);
-	}	
-});
-
-$(document).scroll( function() {
-	if ( $(document).scrollTop() > 0 ) {
-		$('#scroll-up').fadeIn();
-		$('#scroll-up').text('Наверх');
-	} else {
-		$('#scroll-up').text('Вниз');
-	}
-});
+//Функция отображения PopUp
+function PopUpShow(){
+  $("#popup1").show();
+}
+//Функция скрытия PopUp
+function PopUpHide(){
+  $("#popup1").hide();
+}

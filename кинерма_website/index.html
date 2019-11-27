@@ -5,29 +5,27 @@
 	<title>кинерма</title>
 	<meta name="description" content=" ">
 	<meta name="keywords" content=" ">
-	<link rel="stylesheet" href="/css/main.css">
-	<link rel="stylesheet" href="/css/media.css">
-	<link rel="stylesheet" href="/css/fonts.css">
-	<link rel="icon" type="image/x-icon" href="/images/kunerma_logo_200x200.png">	
+	<link rel="stylesheet" href="../кинерма_website/css/main.css">
+	<link rel="stylesheet" href="../кинерма_website/css/media.css">
+	<link rel="stylesheet" href="../кинерма_website/css/fonts.css">
+	<link rel="icon" type="image/x-icon" href="../кинерма_website/images/kunerma_logo_200x200.png">	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/7ac9c35e4a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 </head>
 
 <body>
-	
-
-	
-	<div class="container_top">
+	<div class="container_top" id="container_top">
 		<div class="introduction">
 			<header class="header">
 					<nav class="navigation">
-						<a class="nav_link menu1" href="#" >Главная</a>
-						<a class="nav_link menu2" href="#" >О деревне</a>
-						<a class="nav_link menu3" href="/tours.html" >Туры</a>
-						<a class="nav_link menu4" href="#" >Новости</a>
-						<a class="nav_link menu6" href="#" >Контакты</a>
+						<a class="nav_link menu1 transition" href="#container_top" >Главная</a>
+						<a class="nav_link menu2 transition" href="../кинерма_website/about_kinerma.html" >О деревне</a>
+						<a class="nav_link menu3 transition" href="#tours" >Туры</a>
+						<a class="nav_link menu4 transition" href="#news" >Новости</a>
+						<a class="nav_link menu6 transition" href="#contacts" >Контакты</a>
 					</nav>
 			</header>
 			
@@ -47,46 +45,65 @@
 			</div>
 
 			<div class="choose_tour">
-					<a class=choose_tour_link href="#"><p class="choose_tour_text">Выбрать тур</p></a>
+					<a class=choose_tour_link href="#tours"><p class="choose_tour_text">Выбрать тур</p></a>
 			</div>
 		</div>	
 	</div>
 
-	<div class="container_1">
-			<div class="container_1_text_top">
-				<p class="container_1_text1">тур по местным озерам</p>
+	<div class="slider" id="tours">
+		<div class="item">
+			<img src="./images/img_slide2.jpg" alt="Первый слайд">
+			<div class="slideText slideText_tour">Северный Урал — это горы и бесконечные леса, непроходимые болота, загадочные природные аномалии и таинственные коренные жители манси. Исследовать его на квадроциклах под силу только настоящим искателям приключений. Вы справитесь с бездорожьем, камнями и грязью, преодолеете топкие места, пересечете вброд горные реки и доберетесь до самых труднодоступных точек тайги.
+
 			</div>
-			<div class="container_1_picture_text">
-					<div class="container_1_picture">
-						<img src="./images/2 бло.jpg" alt="">
-					</div>
-					<div class="container_1_text_2">
-						<p class="container_1_text_2_inner">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Quis ipsum suspendisse ultrices gravida. 
-							Risus commodo viverra maecenas accumsan lacus vel facilisis.
-						</p>
+			<div class="detailed_text_link">
+				<a class=detailed href="../кинерма_website/tours.html#ural"><p class="detailed_text">Подробнее</p></a>
+			</div>
+				
+		</div>
+	
+		<div class="item">
+			<img src="./images/img_slide3.jpg" alt="Второй слайд">
+			<div class="slideText slideText_tour">Часовню это поселяне просто чудом отстояли в годы
+				советской власти – храмик пытались разобрать, 
+				начав с колокольни, но колокольней пришлосьсреди культовой еловой рощи. 
+				Часовню это поселяне просто чудом отстояли в годы
+				советской власти – храмик пытались разобрать
+			</div>
 
-						<a class=detailed href="#"><p class="detailed_text">Подробнее</p></a>
-					</div>
-			</div>		
+			<div class="detailed_text_link">
+				<a class=detailed href="../кинерма_website/tours.html#lakes"><p class="detailed_text">Подробнее</p></a>
+			</div>
+		</div>
+	
+		<div class="item">
+			<img src="./images/img_slide4.jpg" alt="Третий слайд">
+			
+				<div class="slideText slideText_tour">От соседнего села Ведлозеро, куда ходит автобус из Петрозаводска, 7 км пешком. Сквозь Кинерму идет дорога на Оленец, по которой по несколько раз за день и за ночь проносятся колоны из 5–10 лесовозов. Лес тут добывают и легально, и незаконно. Охотники говорят, на некотором расстоянии от деревни начинается пустыня, вырублено все.</div>
+				<div class="detailed_text_link">
+					<a class=detailed href="../кинерма_website/tours.html#winterKinerma"><p class="detailed_text">Подробнее</p></a>
+				</div>
+			</div>
+	
+		<a class="prev" onclick="minusSlide()">&#10094;</a>
+		<a class="next" onclick="plusSlide()">&#10095;</a>
+	</div>
+	
+	<div class="slider-dots">
+		<span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+		<span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+		<span class="slider-dots_item" onclick="currentSlide(3)"></span> 
 	</div>
 
-	<div class="container_1_arrows">
-		<a class=arrows href="#"><i class="fas fa-arrow-left"></i></i></a>
-		<a class=arrows href="#"><i class="fas fa-arrow-right"></i></i></a>
-	</div>
-
-	<div class="form">
+	<div class="form" id="form">
 		<p class="form_title">Запишись на тур прямо сейчас</p>
 		
 		<form action="/action_page.php" class="container_form">
 		  
-		<input type="text" placeholder="Имя" name="name" required>
-		<input type="text" placeholder="Фамилия" name="surname" required>
-		<input type="text" placeholder="Email" name="email" required>
-		<input type="text" placeholder="Номер телефона" name="phone" required>
+		<input type="text" id="inputName" placeholder="Имя" name="name" required>
+		<input type="text" id="inputSurname" placeholder="Фамилия" name="surname" required>
+		<input type="text" id="inputEmail" placeholder="Email" name="email" required>
+		<input type="text" id="inputPhone" placeholder="Номер телефона" name="phone" required>
 		<select class="select_tour">
 				<option label="Карелия" value="1" >Карелия</option>
 				<option>Коми</option>
@@ -94,26 +111,147 @@
 				<option>Сахалин</option>
 		</select>
 	  
-		<div class="button"><button type="submit" class="btn">Записаться</button></div>
-		</form>
+		<div class="button"><button type="submit" class="btn"><a href="javascript:PopUpShow()">Записаться</a></button></div>
+		<div class="b-popup" id="popup1">
+			<div class="b-popup-content">
+			   
+			
+			   <p>Спасибо, Ваша заявка принята.<br></p>
+			   <a href="javascript:PopUpHide()">Понятно</a>
+			</div>
+		</div>	
+	</form>
 	</div>
 
-	<div class="container_2">
-		<div class="container_2_text">
-			<p class="container_2_text_par1">Кинерма,</p>
-			<p class="container_2_text_par2">республика карелия</p>
+	<!-- Новости -->
+
+	<div class="slider" id="news">
+			<div class="item">
+				<img src="http://www.temples.ru/private/f000133/133_0094572b.jpg" alt="Первый слайд">
+				<div class="slideText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Quis ipsum suspendisse ultrices gravida. 
+						Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+					<div class="slideNews">Новости</div>
+			</div>
+		
+			<div class="item">
+				<img src="http://vizitkarelia.ru/_data/files.thumb/2/8/28ccee35d431f0b_1778.1a279acae7_g-middle.jpg" alt="Второй слайд">
+				<div class="slideText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Quis ipsum suspendisse ultrices gravida. 
+						Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+				<div class="slideNews">Новости</div>
+			</div>
+		
+			<div class="item">
+				<img src="https://mobimg.b-cdn.net/pic/v2/gallery/preview/gory-pejzazh-priroda-50322.jpg" alt="Третий слайд">
+				
+					<div class="slideText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Quis ipsum suspendisse ultrices gravida. 
+							Risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+					<div class="slideNews">Новости</div>
+				</div>
+		
+			<a class="prev" onclick="minusSlide()">&#10094;</a>
+			<a class="next" onclick="plusSlide()">&#10095;</a>
 		</div>
-	</div>
+		
+		<div class="slider-dots">
+			<span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+			<span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+			<span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+		</div>
 	
+	<!-- контакты -->
+
+	<div class="contacts" id="contacts">
+		<div class="contacts_title">
+			<p> ~Контакты~</p>
+		</div>
+		
+		<div class="contacts_map_info">
+				<div class="contacts_map">
+						<iframe class="iframe_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.540390188807!2d37.617688019475125!3d55.75709892201046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5ac03bf36b%3A0xdff2fea6c0eaefea!2z0JHQuNC30L3QtdGBLdC_0YDQvtGB0YLRgNCw0L3RgdGC0LLQviBNZWV0aW5nIFBvaW50!5e0!3m2!1sru!2sua!4v1572877927463!5m2!1sru!2sua"  
+						frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</div>
+
+				<div class="contacts_info">
+						<table class="table-fill">
+								<tbody class="table-hover">
+								<tr>
+								<td class="text-left">
+									<span class="lnr lnr-phone-handset"></span>
+								</td>
+								<td class="text-right">
+									<span class="phone_title title_cont">Номер телефона:</span><br>
+									<span class="phone_number main_cont">+7(495)104-9-399</span>
+								</td>
+								</tr>
+								
+								<tr>
+								<td class="text-left">
+									<span class="lnr lnr-map-marker"></span>
+								</td>
+								<td class="text-right">
+									<span class="adress_title title_cont">Адрес:</span><br>
+									<span class="adress main_cont">г. Москва, поселение Новофедоровское,<br>
+										деревня Зверево, офис Продаж
+									</span>
+								</td>
+								</tr>
+
+								<tr>
+								<td class="text-left">
+									<span class="lnr lnr-clock"></span>
+								</td>
+								<td class="text-right">
+										<span class="work_time title_cont">График работы:</span><br>
+										<span class="work main_cont">Пн - Вс: с 10:00 до 19:00</span>
+								</td>
+								</tr>
+								
+								<tr>
+								<td class="text-left">
+										<span class="lnr lnr-envelope"></span>
+								</td>
+								<td class="text-right">
+									<span class="email_title title_cont">Электронная почта:</span><br>
+									<span class="email main_cont">info@жкборисоглебское.рф</span>
+								</td>
+								</tr>
+								
+								<tr class="last_cell">
+								<td class="text-left cell" colspan="2">
+										<span class="lnr lnr-map"></span>
+										<span class="shema">Схема проезда</span>
+										<span class="lnr lnr-location"></span>
+										<span class="shema">GPS</span>
+								</td>
+								<td class="text-right cell">
+
+								</td>
+								</tr>
+
+								</tbody>
+								</table>
+				</div>
+		</div>
+		
+	</div>
+
+	<!-- Футер -->
+
 	<footer>
 		<div class="footer_menu">
-				<div class="navigation_footer">
-					<a class="nav_link menu1" href="#" >Главная</a>
-					<a class="nav_link menu2" href="#" >О деревне</a>
-					<a class="nav_link menu3" href="#" >Туры</a>
-					<a class="nav_link menu4" href="#" >Новости</a>
-					<a class="nav_link menu6" href="#" >Контакты</a>
-				</div>
+				<nav class="navigation_footer">
+					<a class="nav_link menu1" href="#container_top" >Главная</a>
+					<a class="nav_link menu2" href="../кинерма_website/about_kinerma.html" >О деревне</a>
+					<a class="nav_link menu3" href="#slider" >Туры</a>
+					<a class="nav_link menu4" href="#news" >Новости</a>
+					<a class="nav_link menu6" href="#contacts" >Контакты</a>
+				</nav>
 		</div>
 		<div class="all_right_reserved">
 			<div class="logo_c">&copy;Kinerma</div>
@@ -121,15 +259,9 @@
 		</div>
 	</footer>
 
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="plugins/jquery-maskedinput/jquery.maskedinput.js"></script>
-
+		
 </body>
 </html>
